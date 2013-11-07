@@ -1,3 +1,4 @@
 class Deduction < ActiveRecord::Base
-  belongs_to :scorecard_sheet
+  has_many :scorecard_sheets_deductions
+  has_many :scorecard_sheets, :through => :scorecard_sheets_deductions
 end

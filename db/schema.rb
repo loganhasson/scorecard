@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131107005154) do
+ActiveRecord::Schema.define(version: 20131107011412) do
 
   create_table "deductions", force: true do |t|
     t.integer  "value"
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 20131107005154) do
     t.integer  "student_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "scorecard_sheets_deductions", force: true do |t|
+    t.integer "scorecard_sheet_id"
+    t.integer "deduction_id"
   end
 
   create_table "students", force: true do |t|
