@@ -1,0 +1,29 @@
+<h1>Listing scorecard_sheets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Total</th>
+      <th>Student</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @scorecard_sheets.each do |scorecard_sheet| %>
+      <tr>
+        <td><%= scorecard_sheet.total %></td>
+        <td><%= scorecard_sheet.student_id %></td>
+        <td><%= link_to 'Show', scorecard_sheet %></td>
+        <td><%= link_to 'Edit', edit_scorecard_sheet_path(scorecard_sheet) %></td>
+        <td><%= link_to 'Destroy', scorecard_sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Scorecard sheet', new_scorecard_sheet_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @scorecard_sheet.total %>
+</p>
+
+<p>
+  <strong>Student:</strong>
+  <%= @scorecard_sheet.student_id %>
+</p>
+
+<%= link_to 'Edit', edit_scorecard_sheet_path(@scorecard_sheet) %> |
+<%= link_to 'Back', scorecard_sheets_path %>
